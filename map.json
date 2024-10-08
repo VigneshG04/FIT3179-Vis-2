@@ -2,10 +2,11 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Human Development Index (2021)",
-        "fontSize": 35
+        "fontSize": 26,
+        "font": "Trebuchet MS"
     },
-    "height":  "container",
-    "width": "container",
+    "height":  800,
+    "width": 1400,
     "projection": {"type": "equalEarth"},
     "background": "#e7f0ff",
     "layer": [

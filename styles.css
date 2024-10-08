@@ -1,0 +1,35 @@
+body {
+    background-color: #e7f0ff;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+
+.container_1 {
+    display: grid;
+    padding: 0 12%;
+}
+
+.container_2 {
+    display: grid;
+    height: 865px;
+    padding: 0 12.5%;
+}
+
+.c_map {
+    background-color: #e7f0ff;
+}
+
+.hdi_gni {
+    background-color: #e7f0ff;
+}
