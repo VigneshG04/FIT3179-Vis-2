@@ -26,6 +26,13 @@ p {
     padding: 0 12.5%;
 }
 
+.container_3 {
+    display:grid;
+    height: 600px;
+    grid-template-columns: 50% 50%;
+    padding: 0 5%;
+}
+
 .c_map {
     background-color: #e7f0ff;
 }
