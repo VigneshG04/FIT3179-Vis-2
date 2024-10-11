@@ -15,6 +15,7 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
 }
+
 p {
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -30,7 +31,8 @@ p {
 .container_2 {
     display: grid;
     height: 865px;
-    padding: 0 12.5%;
+    padding-left: 7.5%;
+    padding-right: 5%;
 }
 
 .container_3 {

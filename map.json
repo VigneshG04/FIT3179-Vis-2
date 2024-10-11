@@ -46,7 +46,7 @@
                     "type": "quantitative",
                     "scale": {
                         "type": "threshold",
-                        "domain": [0.2, 0.4, 0.6, 0.8],
+                        "domain": [0.6, 0.7, 0.8, 0.9],
                         "scheme": "purples"
                     },
                     "legend": {"title": "2021 HDI"}
