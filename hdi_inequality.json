@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "HDI_Filtered_2021.csv"},
     "title": {
-        "text": "HDI vs Gross National Income",
+        "text": "HDI vs Gender Inequality",
         "fontSize": 24,
         "font": "Trebuchet MS"
     },
@@ -37,16 +37,14 @@
         }
     ],
     "transform": [
-        {
-            "filter": "continent_select == null || datum.Continent == continent_select"
-        }
+        {"filter": "continent_select == null || datum.Continent == continent_select"}
     ],
     "encoding": {
         "x": {
-            "field": "GNI_C_round",
+            "field": "Gender Inequality Index (2021)",
             "type": "quantitative", 
-            "title": "Gross National Income per Capita (USD)",
-            "scale": {"type": "linear", "domain": [0, 175000]}
+            "title": "Gender Inequality Index (2021)",
+            "scale": {"type": "linear"}
         },
         "y": {
             "field": "Human Development Index (2021)", 
@@ -59,6 +57,12 @@
             "mark": "circle",
             "encoding": {
                 "color": {
+                    "condition": [
+                        {
+                            "test": "datum['Gender Inequality Index (2021)'] == 0",
+                            "value": "transparent"
+                        }
+                    ],
                     "field": "Continent",
                     "type": "nominal",
                     "scale": {
@@ -84,7 +88,7 @@
                 "tooltip": [
                     {"field": "Country", "title": "Country", "type": "nominal"},
                     {"field": "Human Development Index (2021)", "title": "2021 HDI", "type": "quantitative"},
-                    {"field": "GNI_C_round", "title": "GNI per Capita ($USD)", "type": "quantitative"}
+                    {"field": "Gender Inequality Index (2021)", "title": "GII (2021)", "type": "quantitative"}
                 ]
             }
         },
@@ -98,7 +102,7 @@
                 "fontStyle": "italic"
             },
             "transform": [
-                {"filter": "datum['Country'] == 'Liechtenstein' || datum['Country'] ==  'South Sudan' || datum['Country'] == 'Qatar' || datum['Country'] == 'United States' || datum['Country'] == 'Switzerland'"}
+                {"filter": "datum['Country'] == 'Tonga' || datum['Country'] ==  'South Sudan' || datum['Country'] == 'Qatar' || datum['Country'] == 'United States' || datum['Country'] == 'Yemen' || datum['Country'] == 'Papua New Guinea' || datum['Country'] == 'Rwanda'"}
             ],
             "encoding": {
                 "text": {"field": "Country", "type": "nominal"},

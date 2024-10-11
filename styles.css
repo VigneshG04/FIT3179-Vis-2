@@ -3,11 +3,18 @@ body {
 }
 
 h1 {
-    color: black;
+    color: #68449c;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
 }
 
+h2 {
+    color: #68449c;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+}
 p {
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -33,10 +40,21 @@ p {
     padding: 0 5%;
 }
 
+.container_4 {
+    display:grid;
+    height: 650px;
+    grid-template-columns: 50% 50%;
+    padding: 0 5%;
+}
+
 .c_map {
     background-color: #e7f0ff;
 }
 
 .hdi_gni {
+    background-color: #e7f0ff;
+}
+
+.hdi_inequality {
     background-color: #e7f0ff;
 }
