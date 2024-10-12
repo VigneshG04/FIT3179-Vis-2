@@ -43,13 +43,27 @@
         "x": {
             "field": "Gender Inequality Index (2021)",
             "type": "quantitative", 
-            "title": "Gender Inequality Index (2021)",
-            "scale": {"type": "linear"}
+            "title":"Gender Inequality Index (2021)",
+            "scale": {"type": "linear"},
+            "axis": {
+                "labelFontSize": 15,
+                "labelFont": "Trebuchet MS",
+                "tickCount": 10,
+                "titleFontSize": 20,
+                "titleFont": "Trebuchet MS"
+            }
         },
         "y": {
             "field": "Human Development Index (2021)", 
             "type": "quantitative",
-            "scale": {"domain": [0, 1]}
+            "scale": {"domain": [0, 1]},
+            "axis": {
+                "labelFontSize": 15,
+                "labelFont": "Trebuchet MS",
+                "tickCount": 10,
+                "titleFontSize": 20,
+                "titleFont": "Trebuchet MS"
+            }
         }
     },
     "layer": [
@@ -63,6 +77,14 @@
                             "value": "transparent"
                         }
                     ],
+                    "legend": {
+                        "title": "Continent",
+                        "titleFontSize": 15,
+                        "titleFont": "Trebuchet MS",
+                        "labelFontSize": 11,
+                        "labelFont": "Trebuchet MS",
+                        "symbolSize": 150
+                    },
                     "field": "Continent",
                     "type": "nominal",
                     "scale": {
@@ -99,6 +121,7 @@
                 "baseline": "middle",
                 "dx": 5,
                 "fontSize": 12,
+                "font": "Trebuchet MS",
                 "fontStyle": "italic"
             },
             "transform": [

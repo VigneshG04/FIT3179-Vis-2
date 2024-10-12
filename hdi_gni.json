@@ -34,24 +34,49 @@
                 ],
                 "name": "Select Continent: "
             }
-        }
+        },
+        {
+            "name": "gni_slider",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 0,
+                "max": 140000,
+                "step": 10000,
+                "name":"Minimum GNI/capita: "
+            }
+    }
     ],
     "transform": [
-        {
-            "filter": "continent_select == null || datum.Continent == continent_select"
-        }
+        {"filter": "continent_select == null || datum.Continent == continent_select"},
+        {"filter": "datum.GNI_C_round > gni_slider"}
     ],
     "encoding": {
         "x": {
             "field": "GNI_C_round",
             "type": "quantitative", 
             "title": "Gross National Income per Capita (USD)",
-            "scale": {"type": "linear", "domain": [0, 175000]}
+            "scale": {
+                "domain": {"param": "gni_slider"}
+            },
+            "axis": {
+                "labelFontSize": 15,
+                "labelFont": "Trebuchet MS",
+                "tickCount": 10,
+                "titleFontSize": 20,
+                "titleFont": "Trebuchet MS"
+            }
         },
         "y": {
             "field": "Human Development Index (2021)", 
             "type": "quantitative",
-            "scale": {"domain": [0, 1]}
+            "scale": {"domain": [0, 1]},
+            "axis": {
+                "labelFontSize": 15,
+                "labelFont": "Trebuchet MS",
+                "titleFontSize": 20,
+                "titleFont": "Trebuchet MS"
+            }
         }
     },
     "layer": [
@@ -61,6 +86,14 @@
                 "color": {
                     "field": "Continent",
                     "type": "nominal",
+                    "legend": {
+                        "title": "Continent",
+                        "titleFontSize": 15,
+                        "titleFont": "Trebuchet MS",
+                        "labelFontSize": 11,
+                        "labelFont": "Trebuchet MS",
+                        "symbolSize": 150
+                    },
                     "scale": {
                         "domain": [
                         "Africa",
@@ -84,7 +117,7 @@
                 "tooltip": [
                     {"field": "Country", "title": "Country", "type": "nominal"},
                     {"field": "Human Development Index (2021)", "title": "2021 HDI", "type": "quantitative"},
-                    {"field": "GNI_C_round", "title": "GNI per Capita ($USD)", "type": "quantitative"}
+                    {"field": "GNI_C_round", "title": "2021 GNI per Capita ($USD)", "type": "quantitative"}
                 ]
             }
         },
@@ -95,6 +128,7 @@
                 "baseline": "middle",
                 "dx": 5,
                 "fontSize": 12,
+                "font": "Trebuchet MS",
                 "fontStyle": "italic"
             },
             "transform": [

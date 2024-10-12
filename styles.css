@@ -60,3 +60,11 @@ p {
 .hdi_inequality {
     background-color: #e7f0ff;
 }
+
+.foot {
+    font-size: 12px
+}
+
+.cont {
+    text-align: left;
+}
