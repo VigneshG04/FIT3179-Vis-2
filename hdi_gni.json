@@ -41,7 +41,7 @@
             "bind": {
                 "input": "range",
                 "min": 0,
-                "max": 140000,
+                "max": 100000,
                 "step": 10000,
                 "name":"Minimum GNI/capita: "
             }
@@ -62,7 +62,7 @@
             "axis": {
                 "labelFontSize": 15,
                 "labelFont": "Trebuchet MS",
-                "tickCount": 10,
+                "tickCount": 9,
                 "titleFontSize": 20,
                 "titleFont": "Trebuchet MS"
             }
@@ -132,7 +132,7 @@
                 "fontStyle": "italic"
             },
             "transform": [
-                {"filter": "datum['Country'] == 'Liechtenstein' || datum['Country'] ==  'South Sudan' || datum['Country'] == 'Qatar' || datum['Country'] == 'United States' || datum['Country'] == 'Switzerland'"}
+                {"filter": "datum['Country'] == 'Liechtenstein' || datum['Country'] ==  'South Sudan' || datum['Country'] == 'Qatar' || datum['Country'] == 'United States' || datum['Country'] == 'Switzerland' || datum['Country'] == 'Singapore'"}
             ],
             "encoding": {
                 "text": {"field": "Country", "type": "nominal"},

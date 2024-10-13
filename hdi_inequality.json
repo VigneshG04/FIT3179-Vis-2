@@ -44,7 +44,7 @@
             "field": "Gender Inequality Index (2021)",
             "type": "quantitative", 
             "title":"Gender Inequality Index (2021)",
-            "scale": {"type": "linear"},
+            "scale": {"domain": [0, 1]},
             "axis": {
                 "labelFontSize": 15,
                 "labelFont": "Trebuchet MS",

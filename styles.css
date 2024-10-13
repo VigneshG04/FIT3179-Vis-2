@@ -37,14 +37,14 @@ p {
 
 .container_3 {
     display:grid;
-    height: 600px;
+    height: 550px;
     grid-template-columns: 50% 50%;
     padding: 0 5%;
 }
 
 .container_4 {
     display:grid;
-    height: 650px;
+    height: 550px;
     grid-template-columns: 50% 50%;
     padding: 0 5%;
 }
